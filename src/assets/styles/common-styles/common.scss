@@ -1,0 +1,74 @@
+@use './container.scss' as *;
+
+.button {
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  border: 1px solid $primaryColor;
+  transition: all 0.3s ease;
+  @media (any-hover: hover) {
+    &:hover {
+      background-color: $secondaryColor;
+      border-color: $secondaryColor;
+      color: #fff;
+    }
+  }
+  &:disabled {
+    background-color: rgb(215, 215, 215);
+    box-shadow: none;
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: rgb(215, 215, 215);
+        box-shadow: none;
+      }
+    }
+  }
+}
+.button--green {
+  background-color: $secondaryColor;
+  color: #fff;
+  border-color: $secondaryColor;
+
+  @media (any-hover: hover) {
+    &:hover {
+      background-color: rgba($secondaryColor, 0.7);
+      border-color: $primaryColor;
+    }
+  }
+}
+
+.title {
+  font-size: 388.888889%; /* 70/18 */
+  color: $primaryColor;
+  font-family: $fontFamilyTitle;
+  line-height: 1.1;
+  align-items: start;
+  @media screen and (max-width: $tablet) {
+    font-size: 50px;
+  }
+  @media screen and (max-width: 670px) {
+    font-size: 40px;
+  }
+}
+.paragraph {
+  align-items: start;
+  line-height: 177%;
+  letter-spacing: 0.2px;
+  padding-bottom: 30px;
+  @media screen and (max-width: $mobile) {
+    font-size: 1.2rem;
+    line-height: 120%;
+  }
+}
+input {
+  padding: 1rem;
+  color: $primaryColor;
+  border-radius: 10px 0 0 10px;
+  border: 0px solid $primaryColor;
+  background-color: rgba($primaryColor, 0.1);
+  z-index: 5;
+  @media (any-hover: hover) {
+  }
+}
+span {
+  color: $secondaryColor;
+}
