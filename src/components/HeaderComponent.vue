@@ -95,6 +95,7 @@ onUnmounted(() => {
   z-index: 50;
   width: 100%;
   transition: transform 0.3s ease-in-out;
+  padding-top: 10px;
   // background-color: #fff;
   @media (min-width: 1250px) {
     padding: 20px 10%;

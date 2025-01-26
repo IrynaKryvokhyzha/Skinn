@@ -9,22 +9,22 @@
 //&display=swap - додати при підключенні через плагін
 @import url("https://fonts.googleapis.com/css?family=Inter:regular,600&display=swap");
 
-@import url("https://fonts.googleapis.com/css?family=Style + Script:regular,600&display=swap");
-
 @import url("https://fonts.googleapis.com/css?family=Roboto+Slab:regular,600&display=swap");
+
+@import url("https://fonts.googleapis.com/css?family=Alex+Brush:regular&display=swap");
 // Підключення іконкових шрифтів ===========================================================
 // Підключити, якщо є файл іконкового шрифту
 // @import "fonts/icons";
 
 $fontFamily: "Inter", sans-serif;
-$fontFamilyCursive: "Style Script", cursive;
+$fontFamilyCursive: "Alex Brush";
 $fontFamilyTitle: "Roboto Slab", sans-serif;
 $fontSize: 18px; // де 18(px) - розмір шрифту за замовчуванням з макету
 // Основні кольори
 $primaryColor: #222222; // Колір шрифту за замовчуванням
 $secondaryColor: #68513f;
 $lightBrownColor: #e7ded8;
-$mediumBrownColo: #dacec6;
+$mediumBrownColor: #dacec6;
 
 // Налаштування адаптивної сітки ==============================================================================================================================================================================
 

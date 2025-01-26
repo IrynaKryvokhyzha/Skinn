@@ -2,13 +2,13 @@
 
 .button {
   padding: 1rem 2rem;
-  border-radius: 10px;
-  border: 1px solid $primaryColor;
+  color: $secondaryColor;
+  border: 1px solid $secondaryColor;
+  background-color: $mediumBrownColor;
   transition: all 0.3s ease;
   @media (any-hover: hover) {
     &:hover {
       background-color: $secondaryColor;
-      border-color: $secondaryColor;
       color: #fff;
     }
   }
@@ -23,11 +23,11 @@
     }
   }
 }
-.button--green {
+.button--rounded {
   background-color: $secondaryColor;
   color: #fff;
   border-color: $secondaryColor;
-
+  border-radius: 20px;
   @media (any-hover: hover) {
     &:hover {
       background-color: rgba($secondaryColor, 0.7);
@@ -37,17 +37,26 @@
 }
 
 .title {
-  font-size: 388.888889%; /* 70/18 */
+  font-size: 70px; /* 82/18 */
   color: $primaryColor;
   font-family: $fontFamilyTitle;
-  line-height: 1.1;
+  line-height: 1.5;
+
   align-items: start;
   @media screen and (max-width: $tablet) {
     font-size: 50px;
   }
-  @media screen and (max-width: 670px) {
+  @media screen and (max-width: $mobile) {
     font-size: 40px;
   }
+}
+
+.title-span {
+  display: block;
+  font-family: $fontFamilyCursive;
+  font-size: 10rem;
+  font-weight: 500;
+  transform: rotate(5deg);
 }
 .paragraph {
   align-items: start;
