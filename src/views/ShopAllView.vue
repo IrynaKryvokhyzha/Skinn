@@ -1,19 +1,14 @@
 <template>
   <MainMasterPage>
-    <div class="about">
-      <h1>This is an about page</h1>
-    </div>
+    <ProductsComponent class="products-component" />
   </MainMasterPage>
 </template>
 <script setup>
 import MainMasterPage from "@/masterpages/MainMasterPage.vue";
+import ProductsComponent from "@/components/ProductsComponent.vue";
 </script>
 <style>
-@media (min-width: 1024px) {
-  .about {
-    min-height: 100vh;
-
-    align-items: center;
-  }
+.products-component {
+  padding-top: 100px;
 }
 </style>
