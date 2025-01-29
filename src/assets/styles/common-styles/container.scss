@@ -159,6 +159,7 @@ body {
 // Сніппет (HTML): ibga (a з картинкою та класами)
 [class*="-ibg"] {
   position: relative;
+  //add padding
   img {
     position: absolute;
     width: 100%;

@@ -1,19 +1,21 @@
 <template>
   <MainMasterPage>
     <div class="blog">
-      <h1>This is an blog page</h1>
+      <BlogComponent />
     </div>
   </MainMasterPage>
 </template>
 <script setup>
 import MainMasterPage from "@/masterpages/MainMasterPage.vue";
+import BlogComponent from "@/components/BlogComponent.vue";
 </script>
-<style>
-@media (min-width: 1024px) {
-  .blog {
-    min-height: 100vh;
+<style lang="scss">
+@use "../assets/styles/common-styles/container.scss" as *;
 
-    align-items: center;
+.blog {
+  padding-top: 100px;
+  @media screen and (max-width: $tablet) {
+    padding-top: 50px;
   }
 }
 </style>

@@ -1,19 +1,20 @@
 <template>
   <MainMasterPage>
-    <div class="our-story">
-      <h1>This is an ourstory page</h1>
+    <div class="our-story__container">
+      <h1>This is an our story page</h1>
     </div>
   </MainMasterPage>
 </template>
 <script setup>
 import MainMasterPage from "@/masterpages/MainMasterPage.vue";
 </script>
-<style>
-@media (min-width: 1024px) {
-  .about {
-    min-height: 100vh;
+<style lang="scss">
+.our-story {
+  // .our-story__container
 
-    align-items: center;
+  &__container {
+    padding-top: 100px;
+    text-align: center;
   }
 }
 </style>

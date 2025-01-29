@@ -1,19 +1,20 @@
 <template>
   <MainMasterPage>
-    <div class="pages">
-      <h1>This is an pages page</h1>
+    <div class="pages__container">
+      <h1>This is pages page</h1>
     </div>
   </MainMasterPage>
 </template>
 <script setup>
 import MainMasterPage from "@/masterpages/MainMasterPage.vue";
 </script>
-<style>
-@media (min-width: 1024px) {
-  .pages {
-    min-height: 100vh;
+<style lang="scss">
+.pages {
+  // .pages__container
 
-    align-items: center;
+  &__container {
+    padding-top: 100px;
+    text-align: center;
   }
 }
 </style>

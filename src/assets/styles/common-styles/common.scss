@@ -5,10 +5,11 @@
   color: $secondaryColor;
   border: 1px solid $secondaryColor;
   background-color: $mediumBrownColor;
+
   transition: all 0.3s ease;
   @media (any-hover: hover) {
     &:hover {
-      background-color: $secondaryColor;
+      background-color: rgba($secondaryColor, 0.7);
       color: #fff;
     }
   }
@@ -24,14 +25,17 @@
   }
 }
 .button--rounded {
-  background-color: $secondaryColor;
-  color: #fff;
-  border-color: $secondaryColor;
-  border-radius: 20px;
+  padding: 1rem 2rem;
+  color: $secondaryColor;
+  border: 1px solid $secondaryColor;
+  background-color: $mediumBrownColor;
+  transition: all 0.3s ease;
+  border-radius: 30px;
   @media (any-hover: hover) {
     &:hover {
       background-color: rgba($secondaryColor, 0.7);
       border-color: $primaryColor;
+      color: #fff;
     }
   }
 }
@@ -41,13 +45,12 @@
   color: $primaryColor;
   font-family: $fontFamilyTitle;
   line-height: 1.5;
-
   align-items: start;
   @media screen and (max-width: $tablet) {
-    font-size: 50px;
+    // font-size: 50px;
   }
   @media screen and (max-width: $mobile) {
-    font-size: 40px;
+    line-height: 1.2;
   }
 }
 
@@ -56,13 +59,15 @@
   font-family: $fontFamilyCursive;
   font-size: 10rem;
   font-weight: 500;
-  transform: rotate(5deg);
 }
+
 .paragraph {
-  align-items: start;
+  text-align: center;
   line-height: 177%;
   letter-spacing: 0.2px;
+  padding-top: 10px;
   padding-bottom: 30px;
+  background-color: rgba(#fff, 0.8);
   @media screen and (max-width: $mobile) {
     font-size: 1.2rem;
     line-height: 120%;

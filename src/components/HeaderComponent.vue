@@ -86,13 +86,13 @@ onUnmounted(() => {
 });
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @use "../assets/styles/common-styles/container.scss" as *;
 .header {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 50;
+  z-index: 999;
   width: 100%;
   transition: transform 0.3s ease-in-out;
   padding-top: 10px;
@@ -140,9 +140,6 @@ onUnmounted(() => {
     @media (max-width: 790px) {
       gap: 0.5rem;
     }
-    @media (max-width: 767px) {
-      padding-top: 15px;
-    }
   }
 }
 .header.is-hidden {
@@ -180,10 +177,12 @@ onUnmounted(() => {
 
   &__item {
     flex: 1 1 auto;
-    transition: opacity 0.3s;
-    @media (any-hover: hover) {
-      &:hover {
-        opacity: 0.7;
+    @media (max-width: $mobile) {
+      transition: opacity 0.3s;
+      @media (any-hover: hover) {
+        &:hover {
+          opacity: 0.7;
+        }
       }
     }
   }
@@ -194,12 +193,6 @@ onUnmounted(() => {
   }
 }
 .button {
-  @media (max-width: 840px) {
-    padding: 1rem 1rem;
-  }
-  @media (max-width: 805px) {
-    padding: 0.5rem 0.5rem;
-  }
 }
 // Burger menu
 

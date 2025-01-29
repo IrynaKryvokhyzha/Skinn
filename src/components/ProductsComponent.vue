@@ -55,7 +55,7 @@ onMounted(async () => {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 1rem;
     width: 100%;
-    padding: 2rem;
+    //padding: 2rem;
     @media screen and (max-width: $mobileSmall) {
       padding: 0 0 20px 0;
     }

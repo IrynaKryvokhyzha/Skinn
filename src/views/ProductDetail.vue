@@ -8,7 +8,7 @@
         <h1 class="content__name">{{ product.name }}</h1>
         <p class="content__category">{{ product.category }}</p>
         <p class="content__price">{{ product.price }}</p>
-        <p class="content__description paragraph">{{ product.description }}</p>
+        <p class="content__paragraph paragraph">{{ product.description }}</p>
         <div class="product-detail__actions">
           <a href="#" @click="goToShop">To products</a>
           <button class="button">Add to cart</button>
@@ -52,19 +52,29 @@ onMounted(async () => {
   &__container {
     display: flex;
     flex-direction: row;
-    justify-content: center;
     align-items: center;
     gap: 20px;
+    padding: 40px;
+    @media screen and (max-width: $tablet) {
+      flex-direction: column;
+    }
+    @media screen and (max-width: $mobile) {
+      padding: 20px 0 0 0;
+    }
   }
 
   // .product-detail__image
   &__image-ibg {
     padding: 20%;
+    @media screen and (max-width: $tablet) {
+      padding: 30%;
+    }
   }
 
   // .product-detail__content
 
   &__content {
+    flex-wrap: wrap;
   }
 
   &__actions {
@@ -73,19 +83,25 @@ onMounted(async () => {
     justify-content: flex-start;
     align-items: center;
     gap: 20px;
+    @media screen and (max-width: $mobile) {
+      flex-direction: column-reverse;
+    }
   }
 }
 .content {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   gap: 20px;
+  padding: 10px;
   // .content__name
 
   &__name {
     font-size: 2rem;
     color: $secondaryColor;
     font-weight: 500;
+    @media screen and (max-width: $mobile) {
+      font-size: 1.8rem;
+    }
   }
 
   // .content__category
@@ -100,8 +116,9 @@ onMounted(async () => {
 
   // .content__description
 
-  &__description {
+  &__paragraph {
     text-align: start;
+    max-width: 80%;
   }
 }
 .button {
@@ -116,5 +133,7 @@ a {
       color: $secondaryColor;
     }
   }
+}
+.paragraph {
 }
 </style>
